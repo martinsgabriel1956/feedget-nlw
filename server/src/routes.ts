@@ -22,5 +22,5 @@ routes.post('/feedbacks', async (req, res) => {
   })
 
 
-  return res.status(201);
+  return res.status(201).send();
 })
