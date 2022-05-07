@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {  } from 'express';
 import cors from 'cors';
 
 import { routes } from './routes';
@@ -6,6 +6,7 @@ import { routes } from './routes';
 const app = express();
 
 app.use(cors())
+app.use(express.urlencoded({limit: '3mb'}));
 app.use(express.json());
 app.use(routes);
 
